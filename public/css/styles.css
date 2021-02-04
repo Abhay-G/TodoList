@@ -1,6 +1,9 @@
 html {
   background-color: #eff7e1;
   background-image: -webkit-linear-gradient(65deg, #d92027 20%, #ffc75f 60% );
+  display:flex;
+  align-items:center;
+  justify-content:center;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
