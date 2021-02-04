@@ -1,0 +1,36 @@
+
+ <%- include("header") -%>
+  <div class="box" id="heading">
+    <h1><%=listTitle%></h1>
+  </div>
+
+
+  <div class="box rest">
+      <form id="chkform" action="/" method="post">
+    <% for(var i=0;i<addItems.length;i++) { %>
+
+    <div class="item">
+      <input type="checkbox" name="chkindex" value = <%= i %>>
+      <p class="key"><%= addItems[i] %></p>
+    </div>
+
+    <%  } %>
+  </form>
+    <form class="item" action="/" method="post">
+      <input type="text" name="newitem" value="" placeholder="Add Things" autocomplete="off">
+      <button class="addbtn" type="submit" name="listButton" value=<%= listTitle %>>+</button>
+    </form>
+
+  </div>
+
+  <div class="footer">
+      <p class="cpyright">&copy EGGZY</p>
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts/jquery.lettering-0.6.1.min.js" charset="utf-8"></script>
+<script src="scripts/textillate.JS" charset="utf-8"></script>
+<script src="scripts/index.js" charset="utf-8"></script>
+<%- include("footer") -%>
