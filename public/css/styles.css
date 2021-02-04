@@ -121,15 +121,7 @@ input[type="text"]:focus {
 }
 @media only screen and (max-width: 600px) {
   .box{
-     width: 300px;
+     width: 80%;
      font-size:14px;
   }
-
-button{
-  width: 35px;
-  height:33px;
-  border-radius: 50%;
-  font-size: 20px;
-
-}
 }
