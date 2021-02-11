@@ -20,8 +20,9 @@ module.exports = (req, res) => {
     });
 
     if (days.includes(listIdentifier)) {
-        newItem.save();
-        res.redirect("/");
+        newItem.save(function(err){
+            res.redirect("/");
+          });
     } else {
         List.findOne(
             {
@@ -30,8 +31,11 @@ module.exports = (req, res) => {
             function (err, foundList) {
                 if (!err) {
                     foundList.lists.push(newItem);
-                    foundList.save();
-                    res.redirect("/" + listName);
+                    foundList.save(function(err)
+                    {
+                        res.redirect("/" + listName);
+                    });
+                    
                 }
             }
         );
