@@ -12,6 +12,7 @@ const item3 = new Item({
 const defaultItems =[item1,item2,item3];
 module.exports = (res) => {
   Item.find({}, function (err, items) {
+    if(err)console.log(err);
     if (items.length == 0) {
       Item.insertMany(defaultItems, function (err) {
         if (err) console.log(err);
